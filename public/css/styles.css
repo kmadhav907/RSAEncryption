@@ -9,6 +9,22 @@ body {
 .box > form {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
+  height: 30vh;
+  width: 50vw;
+}
+input,
+textarea {
+  padding-left: 1vh;
+  width: 50vh;
+  font-size: 1.2em;
+  line-height: 5vh;
+  outline: none;
+  resize: none;
+  border: 0.05vh solid black;
+  border-radius: 1vh;
+  -webkit-box-shadow: 3px 7px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 7px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 7px 10px 0px rgba(0, 0, 0, 0.75);
 }
