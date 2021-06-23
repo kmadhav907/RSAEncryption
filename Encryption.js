@@ -72,15 +72,19 @@ var decrypt = (message) => {
 // console.log('Message ' + msg);
 
 const rsaAlgorithm = (data) => {
+  const startTime = new Date();
+
   const bytes = unpack(data);
   const encoding = encrypt(bytes);
   const encryptedmessage = pack(encoding);
 
   const decoding = decrypt(encoding);
   const decryptionMessage = pack(decoding);
-  return { data, encryptedmessage, decryptionMessage };
+  const endTime = new Date();
+  const milliseconds = endTime.getTime() - startTime.getTime();
+  return { data, encryptedmessage, decryptionMessage, milliseconds };
 };
 // var result = rsaAlgorithm('HI This is Madhav');
 // console.log(result);
-
+rsaAlgorithm('Hi');
 export default rsaAlgorithm;
